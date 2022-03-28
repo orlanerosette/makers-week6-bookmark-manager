@@ -1,3 +1,6 @@
+# Bookmark Manager
+
+Week 6 pairing challenge at Makers Academy.
 
  ## User Stories
 
