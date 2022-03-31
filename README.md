@@ -15,6 +15,13 @@ I want to see a list of bookmarks
 So that I can save a website
 I would like to add the site's address and title to bookmark manager
 ```
+
+```
+As a user
+So I can store bookmark data for later retrieval
+I want to add a bookmark to Bookmark Manager
+```
+
 # Instructions
 
 To use this programme, you need to do the following:
