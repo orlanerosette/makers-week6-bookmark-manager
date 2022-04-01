@@ -11,11 +11,14 @@ feature 'adding bookmarks' do
     fill_in 'url', with: 'https://gal-dem.com'
     click_on 'Add'
 
-    expect(page).to have_content "https://gal-dem.com"
+    expect(page).to have_link('gal-dem', href: 'https://gal-dem.com')
+    
   end
 
   scenario "adds bookmark to database" do
-    Bookmark.create('https://gal-dem.com')
-    expect(Bookmark.all).to include 'https://gal-dem.com'
+    Bookmark.create(url:'https://gal-dem.com', title: 'gal-dem')
+    bookmarks = Bookmark.all
+    expect(bookmarks.first.url).to eq 'https://gal-dem.com'
+    expect(bookmarks.first.title).to eq 'gal-dem'
   end
 end
